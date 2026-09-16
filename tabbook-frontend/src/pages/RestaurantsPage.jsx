@@ -79,17 +79,21 @@ export default function RestaurantsPage() {
             <span><span>&#9689;</span>No phone calls</span>
           </div>
         </div>
-        <div className="hero-image">
-          <img src="/placeholder.jpg" alt="" />
-          <span className="hero-arrow">&#8594;</span>
-          {featured && (
+        {featured ? (
+          <Link to={`/restaurants/${featured.id}`} className="hero-image">
+            <img src={featured.images?.[0]?.url || '/placeholder.svg'} alt="" />
+            <span className="hero-arrow">&#8594;</span>
             <div>
               <small>TONIGHT&apos;S PICK</small>
               <h2>{featured.name}</h2>
               <p>{featured.cuisine || featured.address}</p>
             </div>
-          )}
-        </div>
+          </Link>
+        ) : (
+          <div className="hero-image">
+            <img src="/placeholder.svg" alt="" />
+          </div>
+        )}
       </section>
 
       <section className="places">
@@ -161,7 +165,7 @@ export default function RestaurantsPage() {
         <div className="cards">
           {filtered.map((r) => (
             <Link className="card" to={`/restaurants/${r.id}`} key={r.id}>
-              <img src={r.images?.[0]?.url || '/placeholder.jpg'} alt={r.name} />
+              <img src={r.images?.[0]?.url || '/placeholder.svg'} alt={r.name} />
               <div className="card-body">
                 <h3>{r.name}</h3>
                 <p>

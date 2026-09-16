@@ -27,7 +27,7 @@ nav a.active { color: #1d2723; }
 .search input { border: 0; outline: 0; flex: 1; min-width: 0; background: transparent; }
 .proof { color: #6f7872; font-size: 13px; margin-top: 22px; display: flex; gap: 24px; }
 .proof span { color: #ff654d; margin-right: 6px; }
-.hero-image { height: 480px; position: relative; overflow: hidden; border-radius: 30px; background: #27352f; color: #fff; }
+.hero-image { display: block; height: 480px; position: relative; overflow: hidden; border-radius: 30px; background: #27352f; color: #fff; }
 .hero-image img { height: 100%; width: 100%; object-fit: cover; opacity: .9; }
 .hero-image:after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 45%, #14201bcc); }
 .hero-image div { position: absolute; bottom: 28px; left: 30px; z-index: 1; }

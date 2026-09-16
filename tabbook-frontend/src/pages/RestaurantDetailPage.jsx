@@ -166,7 +166,7 @@ export default function RestaurantDetailPage() {
               )}
             </div>
           ) : (
-            <img className="hero-image" style={{ height: 260, width: '100%' }} src="/placeholder.jpg" alt="" />
+            <img className="hero-image" style={{ height: 260, width: '100%' }} src="/placeholder.svg" alt="" />
           )}
 
           <p className="section-label">{restaurant.name}</p>
@@ -246,7 +246,7 @@ export default function RestaurantDetailPage() {
                 />
                 <input
                   className="field"
-                  placeholder="Notes (optional)"
+                  placeholder="Notes (e.g. window seat please)"
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                 />
