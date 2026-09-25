@@ -128,3 +128,38 @@ nav a.active { color: #1d2723; }
   .summary { position: static; }
   .content h1 { font-size: 40px; }
 }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 14px;
+  border: 1px solid #e49a8c;
+  border-radius: 999px;
+
+  background: #fff6f3;
+  color: #dc6550;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f56551;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.logo-icon svg {
+  width: 31px;
+  height: 31px;
+}

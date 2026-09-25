@@ -16,8 +16,16 @@ export default function Navbar() {
   return (
     <header>
       <Link to="/" className="brand">
-        <span>&#9033;</span>tab<span className="coral">book</span>
-      </Link>
+  <img
+    src="/tabbook-icon.png"
+    alt="TabBook"
+    className="logo-icon"
+  />
+
+  
+    Tab<span className="coral">Book</span>
+  
+</Link>
       <nav>
         <Link to="/" className={isActive('/') ? 'active' : ''}>Discover</Link>
         {isAuthenticated && (
