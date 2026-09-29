@@ -44,7 +44,14 @@ export function AuthProvider({ children }) {
     setUser(null);
   }
 
-  const value = { user, token, loading, login, register, logout, isAuthenticated: !!token };
+  // Called after a successful profile edit (name/email change) so the
+  // navbar/UI reflect the update immediately without needing a re-login.
+  function updateStoredUser(updatedUser) {
+    localStorage.setItem('tabbook_user', JSON.stringify(updatedUser));
+    setUser(updatedUser);
+  }
+
+  const value = { user, token, loading, login, register, logout, updateStoredUser, isAuthenticated: !!token };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 

@@ -163,3 +163,19 @@ nav a.active { color: #1d2723; }
   width: 31px;
   height: 31px;
 }
+.profile-icon-link { display: flex; align-items: center; }
+.profile-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1.5px solid #d8d2c8;
+  color: #1d2723;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .15s, color .15s;
+}
+.profile-icon-link:hover .profile-icon {
+  border-color: #ff654d;
+  color: #ff654d;
+}

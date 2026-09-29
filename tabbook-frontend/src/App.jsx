@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Navbar from './components/Navbar';
+import ProfilePage from './pages/ProfilePage';
 
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
             <Route path="/my-bookings" element={<ProtectedRoute><MyBookingsPage /></ProtectedRoute>} />
             <Route path="/owner" element={<ProtectedRoute requireRole="OWNER"><OwnerDashboardPage /></ProtectedRoute>} />
+            <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
           </Routes>
         </div>
       </AuthProvider>
